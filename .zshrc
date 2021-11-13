@@ -18,9 +18,6 @@ HYPHEN_INSENSITIVE="true"
 zstyle ':omz:update' mode reminder  # just remind me to update when it's time
 zstyle ':omz:update' frequency 15
 
-# Uncomment the following line if pasting URLs and other text is messed up.
-# DISABLE_MAGIC_FUNCTIONS="true"
-
 COMPLETION_WAITING_DOTS="true"
 
 plugins=(
@@ -41,8 +38,6 @@ alias l="ls -CF"
 
 source /opt/ros/noetic/setup.zsh
 source ~/catkin_ws/devel/setup.zsh
-
-export GIT_EDITOR=vim
 
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
