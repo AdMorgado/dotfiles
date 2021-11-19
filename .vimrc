@@ -6,6 +6,8 @@
 :set virtualedit+=onemore
 :set backspace=indent,eol,start
 
+:set hlsearch
+
 :set title
 :set mouse=a
 
