@@ -1,7 +1,7 @@
 # dotfiles
 My dotfiles, currently for managing ROS and College work
 
-# Downloadging
+# Downloading
 ```
 git clone https://github.com/AdMorgado/dotfiles.git ~/dotfiles
 ```
