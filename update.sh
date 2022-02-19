@@ -1,7 +1,7 @@
 #!/bin/bash
 
-#update .zhrc
-cp ./.zshrc ~/.zshrc
+#update .bashrc
+cp ./.bashrc ~/.bashrc
 
 #update .vimrc
 cp ./.vimrc ~/.vimrc
