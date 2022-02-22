@@ -116,6 +116,9 @@ if ! shopt -oq posix; then
   fi
 fi
 
+#aliases
+alias tex="pdflatex"
+
 alias fsds="~/ifs/fsds/FSDS.sh"
 
 export NVM_DIR="$HOME/.nvm"
@@ -123,8 +126,6 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 
-#source ~/Formula-Student-Driverless-Simulator/ros/devel/setup.bash
-#source ~/catkin_ws/devel/setup.bash
 source /opt/ros/noetic/setup.bash
 source ~/catkin_ws/devel/setup.bash
 source ~/Formula-Student-Driverless-Simulator/ros/devel/setup.bash
