@@ -2,8 +2,9 @@
 
 #install packages
 sudo apt install vim g++ git curl libsfml-dev
-
 sudo apt install gnome-tweaks
+#latex
+sudo apt install texlive-latex-base texlive-extra-utils texlive-science texlive-bibtex-extra texlive-fonts-extra texlive-lang-portuguese
 
 #install ROS for ubuntu 20.04
 sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
