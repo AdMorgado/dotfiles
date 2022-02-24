@@ -2,6 +2,7 @@
 
 #update .bashrc
 cp ./.bashrc ~/.bashrc
+cp ./.bash_aliases ~/.bash_aliases
 
 #update .vimrc
 cp ./.vimrc ~/.vimrc
