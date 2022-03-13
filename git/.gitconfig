@@ -2,7 +2,7 @@
 	email = 73718959+AdMorgado@users.noreply.github.com
 	name = AdMorgado
 [core]
-	editor = vimi
+	editor = vim
 	excludesfile = ~/.gitignore
 [credential]
 	helper = store
