@@ -14,6 +14,7 @@ alias l="ls -CF"
 # Git aliases
 alias gaa="git add -A"
 alias gcm="git commit -m"
+alias gst="git commit -m"
 
 alias ping1="ping 1.1.1.1"
 alias ping8="ping 8.8.8.8"
