@@ -18,7 +18,7 @@ alias gst="git commit -m"
 
 alias ping1="ping 1.1.1.1"
 alias ping8="ping 8.8.8.8"
-alias wttr="curl wttr.io/lisboa"
+alias wttr="curl wttr.in/lisboa"
 
 alias tex="pdflatex"
 
