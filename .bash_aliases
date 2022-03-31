@@ -26,7 +26,7 @@ alias tex="pdflatex"
 alias ctk="catkin"
 
 # FSDS aliases
-alias fsbridge="roslaunch fsds_ros_bridge fsds_ros_bridge.launch manual_mode:=true"
+alias fsbridge="roslaunch fsds_ros_bridge fsds_ros_bridge.launch"
 alias fsds="~/ifs/fsds/FSDS.sh"
 
 
