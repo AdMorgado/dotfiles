@@ -9,6 +9,7 @@ alias rm="rm -r"
 # ls aliases
 alias ll="ls -alF"
 alias la="ls -A"
+alias l1="ls -1"
 alias l="ls -CF"
 
 # Git aliases
