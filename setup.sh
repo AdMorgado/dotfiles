@@ -25,7 +25,7 @@ sudo apt install -y gnome-software gnome-software-plugin-flatpak
 
 
 # install packages
-sudo apt-get install -y $(grep -vE "^\s*#" install_packages.txt | tr "\n" " ")
+xargs -a install_packages.txt sudo apt install
 
 # Discord
 wget "https://discord.com/api/download?platform=linux&format=deb" -O discord.deb
