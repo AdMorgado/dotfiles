@@ -1,18 +1,10 @@
-# packages to be installed by apt
-
 software-properties-common
 ubuntu-restricted-extras
-
-# basic
 curl
-
-# Computer
 tlp
 conky
+lm-sensors
 gnome-tweaks 
-grub-customizer
-
-# Programming
 vim 
 gcc
 git 
@@ -20,24 +12,17 @@ code
 valgrind
 nodejs npm
 python3 pip
-
-# Daily use
 ubuntu-restricted-extras
 vlc 
 mpv
-zoom
 yt-dlp
 qbittorrent
-
-# Libraries
 libglm-dev
 libsfml-dev 
 libglfw3-dev
 libgtest-dev
 vulkan-tools
 libvulkan-dev
-
-# Latex
 texlive-full
 texlive-latex-base 
 texlive-extra-utils 
