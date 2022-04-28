@@ -23,11 +23,8 @@ alias wttr="curl wttr.in/lisboa"
 
 alias tex="pdflatex"
 
-# ROS aliases
-alias ctk="catkin"
-
 # FSDS aliases
-alias fsbridge="roslaunch fsds_ros_bridge fsds_ros_bridge.launch"
-alias fsds="~/ifs/fsds/FSDS.sh"
+# alias fsbridge="roslaunch fsds_ros_bridge fsds_ros_bridge.launch"
+# alias fsds="~/ifs/fsds/FSDS.sh"
 
 
