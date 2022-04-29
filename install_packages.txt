@@ -1,5 +1,6 @@
 software-properties-common
 ubuntu-restricted-extras
+gawk
 curl
 tlp
 conky
