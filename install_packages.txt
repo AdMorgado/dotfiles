@@ -8,6 +8,7 @@ lm-sensors
 gnome-tweaks 
 vim 
 gcc
+cmake
 git 
 code 
 valgrind
