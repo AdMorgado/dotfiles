@@ -2,6 +2,7 @@ software-properties-common
 ubuntu-restricted-extras
 gawk
 curl
+gparted
 tlp
 conky
 lm-sensors
@@ -12,6 +13,7 @@ cmake
 git 
 code 
 valgrind
+default-jre
 nodejs npm
 python3 pip
 ubuntu-restricted-extras
