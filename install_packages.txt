@@ -15,7 +15,7 @@ code
 valgrind
 default-jre
 nodejs npm
-python3 pip
+python3 pip python-is-python3
 ubuntu-restricted-extras
 vlc 
 mpv
