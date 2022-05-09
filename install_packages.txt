@@ -9,6 +9,7 @@ lm-sensors
 gnome-tweaks 
 vim 
 gcc
+gcc-12
 cmake
 git 
 code 
