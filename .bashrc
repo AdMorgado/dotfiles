@@ -117,7 +117,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 
-source /opt/ros/rolling/setup.bash
-#source ~/catkin_ws/devel/setup.bash
+source /opt/ros/humble/setup.bash
+source ~/dev/devel/setup.bash
 #source ~/Formula-Student-Driverless-Simulator/ros/devel/setup.bash
 

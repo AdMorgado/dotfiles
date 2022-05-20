@@ -19,7 +19,6 @@ sudo apt purge snapd
 
 # Flatpacks
 sudo apt install -y flatpak 
-sudo apt install -y gnome-software-plugin-flatpak
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 sudo apt install -y gnome-software gnome-software-plugin-flatpak
 
@@ -31,15 +30,15 @@ xargs -a install_packages.txt sudo apt install
 wget "https://discord.com/api/download?platform=linux&format=deb" -O discord.deb
 sudo apt install ./discord.deb
 
-# ROS Rolling Ridley - Temporary
+# ROS Rolling Humble
 
-# sudo apt install gnupg lsb-release
-# sudo curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -o /usr/share/keyrings/ros-archive-keyring.gpg
-
-# echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu $(source /etc/os-release && echo $UBUNTU_CODENAME) main" | sudo tee /etc/apt/sources.list.d/ros2.list > /dev/null
-
-# sudo apt update && sudo apt install ros-rolling-desktop
-
+sudo apt install software-properties-common
+sudo add-apt-repository universe
+sudo apt update && sudo apt install curl gnupg lsb-release
+sudo curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -o /usr/share/keyrings/ros-archive-keyring.gpg
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2-testing/ubuntu $(source /etc/os-release && echo $UBUNTU_CODENAME) main" | sudo tee /etc/apt/sources.list.d/ros2.list > /dev/null
+sudo apt update -y && sudo apt upgrade -y 
+sudo apt install ros-humble-desktop-full -y 
 
 ### CLEAN AND UPDATE
 sudo apt update && sudo apt upgrade -y
