@@ -118,6 +118,6 @@ export NVM_DIR="$HOME/.nvm"
 
 
 source /opt/ros/humble/setup.bash
-source ~/ros_ws/devel/setup.bash
+source ~/ros_ws/install/setup.bash
 #source ~/Formula-Student-Driverless-Simulator/ros/devel/setup.bash
 
