@@ -11,9 +11,3 @@ cp ./.vimrc ~/.vimrc
 cp git/.gitconfig ~/.gitconfig
 cp git/.gitignore ~/.gitignore
 
-mkdir -p ~/dev_ws/src
-cd ~/dev_ws/
-
-colcon build
-
-cd ~
