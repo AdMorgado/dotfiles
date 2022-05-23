@@ -24,7 +24,7 @@ alias wttr="curl wttr.in/lisboa"
 alias tex="pdflatex"
 
 # FSDS aliases
-# alias fsbridge="roslaunch fsds_ros_bridge fsds_ros_bridge.launch"
-# alias fsds="~/ifs/fsds/FSDS.sh"
+alias fsbridge="ros2 run fsds_ros2_bridge fsds_ros2_bridge"
+alias fsds="~/ifs/fsds/FSDS.sh"
 
 
