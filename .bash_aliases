@@ -1,6 +1,7 @@
 
 alias explorer="nautilus"
 alias sorc="source ~/.bashrc"
+alias update="sudo apt update && sudo apt upgrade"
 
 # Default alias replacements
 alias mkdir="mkdir -p"
