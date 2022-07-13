@@ -24,6 +24,11 @@ alias wttr="curl wttr.in/lisboa"
 
 alias tex="pdflatex"
 
+# ROS2 aliases
+alias cb="colcon build --symlink-install"
+alias rtl="ros2 topic list"
+alias rte="ros2 topic echo"
+
 # FSDS aliases
 alias fsbridge="ros2 run fsds_ros2_bridge fsds_ros2_bridge"
 alias fsds="~/ifs/fsds/FSDS.sh"
