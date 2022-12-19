@@ -5,6 +5,9 @@
 :set autoindent
 :set virtualedit+=onemore
 :set backspace=indent,eol,start
+
+:set autoindent
+:set expandtab
 :set tabstop=4
 
 :set hlsearch
