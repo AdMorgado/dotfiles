@@ -1,5 +1,6 @@
 # dotfiles
-My dotfiles, currently for managing ROS and College work
+My dotfiles, currently for managing ROS and College work,
+along side a custom Neovim setup for C++, Rust and Typescript/React work
 
 # Downloading
 ```
