@@ -22,12 +22,6 @@ alias ping1="ping 1.1.1.1"
 alias ping8="ping 8.8.8.8"
 alias wttr="curl wttr.in/lisboa"
 
-# ROS2 aliases
-alias cb="colcon build --symlink-install"
-alias rtl="ros2 topic list"
-alias rte="ros2 topic echo"
-
-# FSDS aliases
-alias fsbridge="ros2 run fsds_ros2_bridge fsds_ros2_bridge"
-alias fsds="~/ifs/fsds/FSDS.sh"
+# Editor aliases
+alias vim="nvim"
 

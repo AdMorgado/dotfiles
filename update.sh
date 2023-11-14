@@ -1,13 +1,13 @@
 #!/usr/bin/bash
 
 # Update .bashrc
-cp ./.bashrc ~/.bashrc
-cp ./.bash_aliases ~/.bash_aliases
+cp ./.bashrc ~/
+cp ./.bash_aliases ~/
 
 # Update Neovim
-cp ./nvim ~/.config/nvim
+cp -r ./.config ~/
 
 # Update git config
-cp -r git/.gitconfig ~/.gitconfig
-cp -r git/.gitignore ~/.gitignore
+cp -r git/.gitconfig ~/
+cp -r git/.gitignore ~/
 
