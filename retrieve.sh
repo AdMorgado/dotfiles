@@ -1,2 +1,2 @@
 # Copy Neovim config files
-cp -r ~/.config/nvim ./.config/nvim
+cp -rf ~/.config/nvim ./.config/

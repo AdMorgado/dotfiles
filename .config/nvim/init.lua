@@ -1,5 +1,3 @@
-vim.g.mapleader = ' '
-vim.g.maplocalleader = ' '
 
 local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
 if not vim.loop.fs_stat(lazypath) then
@@ -16,6 +14,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
+
         -- which-key
 	{
 		"folke/which-key.nvim",
@@ -45,7 +44,7 @@ require("lazy").setup({
                 end,
                 opts = {},
         },
-
+        
         -- Statusline
         {
                 "nvim-lualine/lualine.nvim",
@@ -108,6 +107,10 @@ require("lazy").setup({
         -- fidget.nvim
         {
                 "j-hui/fidget.nvim",
+        },
+
+        {
+        
         },
 
         require "plugins.neotree"
@@ -425,13 +428,15 @@ require('luasnip.loaders.from_vscode').lazy_load()
 luasnip.config.setup {}
 
 cmp.setup {
-  snippet = {
-    expand = function(args)
-      luasnip.lsp_expand(args.body)
-    end,
-  },
-  completion = {
-    completeopt = 'menu,menuone,noinsert'
+        enabled=true,
+        preselect="None",
+        snippet = {
+                expand = function(args)
+                        luasnip.lsp_expand(args.body)
+                 end,
+        },
+        completion = {
+        completeopt = "menu,menuone,noinsert,noselect"
   },
   mapping = cmp.mapping.preset.insert {
     ['<C-n>'] = cmp.mapping.select_next_item(),
@@ -440,8 +445,8 @@ cmp.setup {
     ['<C-f>'] = cmp.mapping.scroll_docs(4),
     ['<C-Space>'] = cmp.mapping.complete {},
     ['<CR>'] = cmp.mapping.confirm {
-      behavior = cmp.ConfirmBehavior.Replace,
-      select = true,
+      behavior = cmp.ConfirmBehavior.Insert,
+      select = false,
     },
     ['<Tab>'] = cmp.mapping(function(fallback)
       if cmp.visible() then
