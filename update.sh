@@ -4,7 +4,7 @@
 cp ./.bashrc ~/
 cp ./.bash_aliases ~/
 
-# Update Neovim
+# Config files 
 cp -r ./.config ~/
 
 # Update git config
