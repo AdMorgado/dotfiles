@@ -1,4 +1,9 @@
 
+-- Set Space as Leader
+vim.g.mapleader = " ";
+vim.g.maplocalleader = " ";
+
+-- Download and setup lazyvim
 local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
 if not vim.loop.fs_stat(lazypath) then
   vim.fn.system {
@@ -10,10 +15,14 @@ if not vim.loop.fs_stat(lazypath) then
     lazypath,
   }
 end
-
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
+
+        "tpope/vim-fugitive",
+        "tpope/vim-rhubarb",
+
+        "tpope/vim-sleuth",
 
         -- which-key
 	{
@@ -94,6 +103,7 @@ require("lazy").setup({
 		branch="0.1.x",
 		dependencies={
 			"nvim-lua/plenary.nvim",
+
 			{
 				"nvim-telescope/telescope-fzf-native.nvim",
 				run="make",
@@ -109,11 +119,8 @@ require("lazy").setup({
                 "j-hui/fidget.nvim",
         },
 
-        {
-        
-        },
-
-        require "plugins.neotree"
+        require "plugins.copilot",
+        require "plugins.neotree",
 }, {});
 
 
@@ -147,16 +154,6 @@ vim.o.termguicolors = true
 -- [[ Basic Keymaps ]]
 
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
-
--- Remap for dealing with word wrap
-vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
-vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
-
--- Diagnostic keymaps
-vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous diagnostic message' })
-vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next diagnostic message' })
-vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Open floating diagnostic message' })
-vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
 
 -- [[ Highlight on yank ]]
 -- See `:help vim.highlight.on_yank()`

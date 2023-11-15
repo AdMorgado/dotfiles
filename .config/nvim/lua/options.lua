@@ -13,5 +13,4 @@ o.ignorecase = true;
 o.smartcase = true;
 o.termguicolors = true;
 
-global.mapleader = ' '
-global.maplocalleader = ' '
+
