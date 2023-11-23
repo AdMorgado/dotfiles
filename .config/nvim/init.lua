@@ -20,7 +20,6 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
 
         "tpope/vim-fugitive",
-
         "tpope/vim-sleuth",
 
         -- which-key
@@ -28,6 +27,7 @@ require("lazy").setup({
 		"folke/which-key.nvim",
 		opts = {},
 	},
+
 	{
 		"folke/neodev.nvim",
 		opts = {},
@@ -52,7 +52,7 @@ require("lazy").setup({
                 end,
                 opts = {},
         },
-        
+
         -- Statusline
         {
                 "nvim-lualine/lualine.nvim",
@@ -79,6 +79,8 @@ require("lazy").setup({
                         "williamboman/mason.nvim",
                         "williamboman/mason-lspconfig.nvim",
                 },
+                config=function ()
+                end
         },
 
         -- Autocompletion
@@ -92,8 +94,6 @@ require("lazy").setup({
 			-- LSP source
 			"hrsh7th/cmp-nvim-lsp",
 
-			-- Add snippets
-			-- "rafamadriz/friendly-snippets",
                 },
         },
 
@@ -129,6 +129,8 @@ require("lazy").setup({
 
         require "plugins.copilot",
         require "plugins.neotree",
+        require "plugins.toggleterm",
+        require "plugins.trouble",
 }, {});
 
 
@@ -385,12 +387,9 @@ require('mason-lspconfig').setup()
 --  If you want to override the default filetypes that your language server will attach to you can
 --  define the property 'filetypes' to the map in question.
 local servers = {
-  -- clangd = {},
-  -- gopls = {},
-  -- pyright = {},
+  clangd = {},
   -- rust_analyzer = {},
   -- tsserver = {},
-  -- html = { filetypes = { 'html', 'twig', 'hbs'} },
 
   lua_ls = {
     Lua = {
