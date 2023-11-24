@@ -130,7 +130,7 @@ require("lazy").setup({
         require "plugins.copilot",
         require "plugins.neotree",
         require "plugins.toggleterm",
-        require "plugins.trouble",
+        require "plugins.todo",
 }, {});
 
 
