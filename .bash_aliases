@@ -25,3 +25,5 @@ alias wttr="curl wttr.in/lisboa"
 # Editor aliases
 alias vim="nvim"
 
+alias dk="docker"
+alias dc="docker-compose"
