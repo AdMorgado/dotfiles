@@ -1,7 +1,9 @@
-
+# General Aliases
 alias explorer="nautilus"
 alias sorc="source ~/.bashrc"
 alias update="sudo apt update && sudo apt upgrade"
+
+alias dotset="~/dotfiles/setup.bash"
 
 # Default alias replacements
 alias mkdir="mkdir -p"
@@ -18,6 +20,7 @@ alias gaa="git add -A"
 alias gcm="git commit -m"
 alias gst="git commit -m"
 
+# Web Aliases
 alias ping1="ping 1.1.1.1"
 alias ping8="ping 8.8.8.8"
 alias wttr="curl wttr.in/lisboa"
@@ -27,3 +30,4 @@ alias vim="nvim"
 
 alias dk="docker"
 alias dc="docker-compose"
+

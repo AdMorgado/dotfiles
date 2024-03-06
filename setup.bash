@@ -1,13 +1,13 @@
 #!/usr/bin/bash
 
 # Update .bashrc
-cp ./.bashrc ~/
-cp ./.bash_aliases ~/
+cp -r ./.bashrc ~/
+cp -r ./.bash_aliases ~/
 
 # Config files 
 cp -r ./.config ~/
 
 # Update git config
-cp -r git/.gitconfig ~/
-cp -r git/.gitignore ~/
+cp -r ./.gitconfig ~/
+cp -r ./.gitignore ~/
 
