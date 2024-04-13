@@ -1,3 +1,8 @@
 [core]
 	editor = nvim
 	excludesfile = ~/.gitignore
+[user]
+	email = ad3morgado@gmail.com
+	name = AdMorgado
+[credential]
+	helper = store
