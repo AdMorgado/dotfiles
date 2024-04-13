@@ -1,13 +1,16 @@
 #!/usr/bin/bash
 
-# Update .bashrc
-cp -r ./.bashrc ~/
-cp -r ./.bash_aliases ~/
+base_path=$(dirname $0)
 
-# Config files 
-cp -r ./.config ~/
+##################
+# CONFIGURATIONS #
+##################
 
-# Update git config
-cp -r ./.gitconfig ~/
-cp -r ./.gitignore ~/
+cp -rf $base_path/.zshrc ~/
+cp -rf $base_path/.zsh_aliases ~/
+
+cp -rf $base_path/.gitconfig ~/
+cp -rf $base_path/.global_gitignore ~/
+
+cp -rf $base_path/.config/ ~/
 

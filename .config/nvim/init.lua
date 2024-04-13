@@ -203,7 +203,8 @@ require('lazy').setup({
     build = ':TSUpdate',
   },
 
-  -- require "plugins.autopairs",
+  require "plugins.autopairs",
+  require "plugins.copilot",
   require "plugins.dap",
   require "plugins.lualine",
   require "plugins.mini",
@@ -315,7 +316,7 @@ vim.keymap.set('n', '<leader>sr', require('telescope.builtin').resume, { desc = 
 vim.defer_fn(function()
   require('nvim-treesitter.configs').setup {
     -- Add languages to be installed here that you want installed for treesitter
-    ensure_installed = { 'c', 'cpp', 'go', 'lua', 'python', 'rust', 'tsx', 'javascript', 'typescript', 'vimdoc', 'vim', 'bash', 'markdown' },
+    ensure_installed = { 'c', 'cpp', 'go', 'lua', 'python', 'rust', 'tsx', 'javascript', 'typescript', 'vimdoc', 'vim', 'bash', 'markdown', "java" },
 
     -- Autoinstall languages that are not installed. Defaults to false (but you can change for yourself!)
     auto_install = false,
@@ -455,7 +456,12 @@ require('mason-lspconfig').setup()
 
 local servers = {
   clangd = {},
-  -- codelldb = {},
+  rust_analyzer = {
+    filetypes = { "rust" }
+  },
+  pyright = {
+    filetypes = { "python" }
+  },
 
   lua_ls = {
     Lua = {
