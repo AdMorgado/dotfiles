@@ -20,7 +20,7 @@ return {
                 "1M",
                 "--glob=!node_modules",
             },
-            pattern= [[\b(KEYWORDS)]],
+            pattern = [[\b(KEYWORDS)]],
         },
     },
 };

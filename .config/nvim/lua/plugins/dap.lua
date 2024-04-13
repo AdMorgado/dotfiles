@@ -24,25 +24,27 @@ return {
         "rcarriga/nvim-dap-ui",
         event = "VeryLazy",
         dependencies = {
-            "mfussenegger/nvim-dap"
+            "mfussenegger/nvim-dap",
+            "nvim-neotest/nvim-nio"
         },
-        opts = {
-
-        }
-    },
-    {
-        "theHamsta/nvim-dap-virtual-text",
-        opts = { }
-    },
-    {
-        "mfussenegger/nvim-dap-python",
-        ft = "python",
-        dependencies = {
-            "mfussenegger/nvim-dap"
-        },
-        config = function ()
-            local path = "~/.local/share/nvim/mason/packages/debugpy/venv/bin/python"
-            require("dap-python").setup(path)
+        config = function()
+            local dap, dapui = require("dap"), require("dapui")
+            dap.listeners.before.attach.dapui_config = function()
+                dapui.open()
+            end
+            dap.listeners.before.launch.dapui_config = function()
+                dapui.open()
+            end
+            dap.listeners.before.event_terminated.dapui_config = function()
+                dapui.close()
+            end
+            dap.listeners.before.event_exited.dapui_config = function()
+                dapui.close()
+            end
         end
+    },
+    {
+        "theHamsta/nvim-dap-virtual-text"
+        -- TODO: enable this later
     }
 }
