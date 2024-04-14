@@ -33,3 +33,8 @@ alias vim="nvim"
 alias dk="docker"
 alias dc="docker-compose"
 
+# Cargo aliases
+alias cb="cargo build"
+alias cr="cargo run"
+alias ct="cargo test"
+
