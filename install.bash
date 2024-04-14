@@ -27,3 +27,11 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install
 
 chsh -s $(which zsh)
 
+# Install NVM
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+
+# Set latest node and npm versions
+nvm install node --reinstall-packages-from=node
+nvm alias default node
+nvm use default
+
