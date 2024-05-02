@@ -79,9 +79,8 @@ k.set("n", "<leader>f", vim.lsp.buf.format, {
 })
 
 -- Debug Keymaps
-k.set("n", "<leader>dt", function()
-        require("dapui").toggle { reset = true }
-    end,
+k.set("n", "<leader>dt",
+    require("dapui").toggle,
     { noremap = true, desc = "Toggle Diagnostic UI" }
 )
 k.set("n", "<leader>db",
@@ -104,7 +103,7 @@ k.set("n", "<leader>di",
 -- goto-preview keybinds
 local goto_preview = require("goto-preview");
 k.set("n", "gpd", goto_preview.goto_preview_definition, { desc = "Preview Definition" });
-k.set("n", "gpt", goto_preview.goto_preview_type_definition, { desc = "Type Definition" } );
+k.set("n", "gpt", goto_preview.goto_preview_type_definition, { desc = "Type Definition" });
 k.set("n", "gpi", goto_preview.goto_preview_implementation, { desc = "Preview Implementation" });
 k.set("n", "gpD", goto_preview.goto_preview_declaration, { desc = "Preview Declaration" });
 k.set("n", "gP", goto_preview.close_all_win, { desc = "Close all preview Windows" });
@@ -118,10 +117,10 @@ vim.keymap.set('t', '<esc>', [[<C-\><C-n>]]);
 
 -- Trouble and todo comments
 local trouble = require("trouble")
-k.set("n", "<leader>xx", function() trouble.toggle() end)
-k.set("n", "<leader>xw", function() trouble.toggle("workspace_diagnostics") end)
-k.set("n", "<leader>xd", function() trouble.toggle("document_diagnostics") end)
-k.set("n", "<leader>xq", function() trouble.toggle("quickfix") end)
-k.set("n", "<leader>xl", function() trouble.toggle("loclist") end)
-k.set("n", "gR", function() trouble.toggle("lsp_references") end)
-
+k.set("n", "<leader>xx", function() trouble.toggle() end, { desc = "Trouble" })
+k.set("n", "<leader>xw", function() trouble.toggle("workspace_diagnostics") end, { desc = "Workspace Diagnostics" })
+k.set("n", "<leader>xd", function() trouble.toggle("document_diagnostics") end, { desc = "Document Diagnostics" })
+k.set("n", "<leader>xq", function() trouble.toggle("quickfix") end, { desc = "Quickfix" })
+k.set("n", "<leader>xl", function() trouble.toggle("loclist") end, { desc = "Loclist" })
+k.set("n", "gR", function() trouble.toggle("lsp_references") end, { desc = "LSP References" })
+k.set("n", "<leader>xt", ":TodoTelescope<CR>", { desc = "Todo Comments" })

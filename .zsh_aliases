@@ -20,7 +20,7 @@ alias l="ls -CF"
 # Git aliases
 alias gaa="git add -A"
 alias gcm="git commit -m"
-alias gst="git commit -m"
+alias gst="git status"
 
 # Web Aliases
 alias ping1="ping 1.1.1.1"

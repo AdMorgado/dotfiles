@@ -35,3 +35,5 @@ nvm install node --reinstall-packages-from=node
 nvm alias default node
 nvm use default
 
+# Install Rust
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh

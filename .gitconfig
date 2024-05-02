@@ -1,6 +1,6 @@
 [core]
 	editor = nvim
-	excludesfile = ~/.gitignore
+	excludesfile = ~/.global_gitignore
 [user]
 	email = ad3morgado@gmail.com
 	name = AdMorgado
