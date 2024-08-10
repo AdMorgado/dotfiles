@@ -3,21 +3,20 @@ local k = vim.keymap;
 local norm_opts = { noremap = true, silent = true };
 local expr_opts = { expr = true, silent = true };
 
-require("which-key").register {
-    ['<leader>l'] = { name = "[L]SP keymaps", _ = "which_key_ignore" },
-    ["<leader>d"] = { name = "[D]ebug keymaps", _ = "which_key_ignore" },
-    ['<leader>c'] = { name = '[C]ode', _ = 'which_key_ignore' },
-    ['<leader>g'] = { name = '[G]it', _ = 'which_key_ignore' },
-    ['<leader>h'] = { name = 'Git [H]unk', _ = 'which_key_ignore' },
-    ['<leader>r'] = { name = '[R]ename', _ = 'which_key_ignore' },
-    ['<leader>s'] = { name = '[S]earch', _ = 'which_key_ignore' },
-    ['<leader>t'] = { name = '[T]oggle', _ = 'which_key_ignore' },
-    ['<leader>w'] = { name = '[W]orkspace', _ = 'which_key_ignore' },
+require("which-key").add {
+    { '<leader>l', group = "[L]SP keymaps" },
+    { "<leader>d", group = "[D]ebug keymaps" },
+    { '<leader>c', group = '[C]ode' },
+    { '<leader>g', group = '[G]it' },
+    { '<leader>h', group = 'Git [H]unk' },
+    { '<leader>r', group = '[R]ename' },
+    { '<leader>s', group = '[S]earch' },
+    { '<leader>t', group = '[T]oggle' },
+    { '<leader>w', group = '[W]orkspace' },
+    { '<leader>',  group = 'VISUAL <leader>', mode = { "v" } },
+    { '<leader>h', group = 'Git [H]unk',      mode = { "v" } },
+    { 'gp',        group = '[G]oto [P]review' }
 };
-
-require("which-key").register {
-    ['gp'] = { name = '[G]oto [P]review', _ = 'which_key_ignore' },
-}
 
 -- Save And Close
 k.set("n", "<C-s>", ":w<CR>", norm_opts);
@@ -38,6 +37,10 @@ k.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 k.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
 k.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 
+-- Buffer Related
+k.set("n", "<Tab>", "")
+-- k.set("n", "<C-w>", ":BufferClose <CR>");
+
 -- Git related
 k.set("n", "gb",
     function()
@@ -46,13 +49,6 @@ k.set("n", "gb",
     end,
     { desc = "[g]it [b]lame" }
 )
-
--- Neotree related
-k.set("n", "<CR>", ":Neotree toggle<CR>", { desc = "Toggle Neotree" })
-k.set("n", "<leader>nr", ":Neotree reveal<CR>",
-    { desc = "Reveal file location" }
-)
-
 
 -- Diagnostic keymaps
 k.set('n', '<leader>lp', vim.diagnostic.goto_prev, { desc = 'Go to previous diagnostic message' })
@@ -67,6 +63,7 @@ local function toggle_inline_diagnostics()
     vim.diagnostic.config({
         virtual_text = status,
         virtual_lines = status,
+        underline = status,
         signs = status,
     });
     status = not status;
@@ -79,8 +76,7 @@ k.set("n", "<leader>f", vim.lsp.buf.format, {
 })
 
 -- Debug Keymaps
-k.set("n", "<leader>dt",
-    require("dapui").toggle,
+k.set("n", "<leader>dt", require("dapui").toggle,
     { noremap = true, desc = "Toggle Diagnostic UI" }
 )
 k.set("n", "<leader>db",
@@ -113,14 +109,13 @@ k.set("n", "gpr", goto_preview.goto_preview_references, { desc = "Preview Refere
 k.set("n", "<leader>tt", ":ToggleTerm direction=float<CR>", { desc = "Open Terminal Float" })
 k.set("n", "<leader>tv", ":ToggleTerm direction=vertical<CR>", { desc = "Open Terminal Vertical" })
 k.set("n", "<leader>th", ":ToggleTerm direction=horizontal<CR>", { desc = "Open Terminal Horizontal" })
-vim.keymap.set('t', '<esc>', [[<C-\><C-n>]]);
+vim.keymap.set('t', "<Esc><Esc>", "<C-\\><C-n>");
 
 -- Trouble and todo comments
 local trouble = require("trouble")
-k.set("n", "<leader>xx", function() trouble.toggle() end, { desc = "Trouble" })
-k.set("n", "<leader>xw", function() trouble.toggle("workspace_diagnostics") end, { desc = "Workspace Diagnostics" })
-k.set("n", "<leader>xd", function() trouble.toggle("document_diagnostics") end, { desc = "Document Diagnostics" })
-k.set("n", "<leader>xq", function() trouble.toggle("quickfix") end, { desc = "Quickfix" })
-k.set("n", "<leader>xl", function() trouble.toggle("loclist") end, { desc = "Loclist" })
-k.set("n", "gR", function() trouble.toggle("lsp_references") end, { desc = "LSP References" })
-k.set("n", "<leader>xt", ":TodoTelescope<CR>", { desc = "Todo Comments" })
+k.set("n", "<leader>xx", function() trouble.toggle() end)
+k.set("n", "<leader>xw", function() trouble.toggle("workspace_diagnostics") end)
+k.set("n", "<leader>xd", function() trouble.toggle("document_diagnostics") end)
+k.set("n", "<leader>xq", function() trouble.toggle("quickfix") end)
+k.set("n", "<leader>xl", function() trouble.toggle("loclist") end)
+k.set("n", "gR", function() trouble.toggle("lsp_references") end)

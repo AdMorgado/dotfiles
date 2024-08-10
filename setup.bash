@@ -10,6 +10,7 @@ cp -rf $base_path/.zshrc ~/
 cp -rf $base_path/.zsh_aliases ~/
 
 cp -rf $base_path/.gitconfig ~/
+cp -rf $base_path/.gitmessage ~/
 cp -rf $base_path/.global_gitignore ~/
 
 cp -rf $base_path/.config/ ~/

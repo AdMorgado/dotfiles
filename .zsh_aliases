@@ -1,7 +1,7 @@
-
 # Generic Aliases
 alias weather="curl wttr.in"
 
+alias c="clear"
 alias cl="clear"
 alias dotset="~/dotfiles/setup.bash"
 alias sorc="source ~/.zshrc"
@@ -26,9 +26,6 @@ alias gst="git status"
 alias ping1="ping 1.1.1.1"
 alias ping8="ping 8.8.8.8"
 alias wttr="curl wttr.in/lisboa"
-
-# Editor aliases
-alias vim="nvim"
 
 alias dk="docker"
 alias dc="docker-compose"

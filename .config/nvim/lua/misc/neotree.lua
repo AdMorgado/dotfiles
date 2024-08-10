@@ -60,5 +60,10 @@ return {
                 }
             }
         });
+
+        vim.keymap.set("n", "<CR>", ":Neotree toggle<CR>", { desc = "Toggle Neotree" })
+        vim.keymap.set("n", "<leader>nr", ":Neotree reveal<CR>",
+            { desc = "Reveal file location" }
+        )
     end
 }
