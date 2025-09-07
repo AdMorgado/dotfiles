@@ -4,20 +4,14 @@
 # INSTALLATION #
 ################
 
-sudo apt install -y gcc g++
-sudo apt install -y npm zip unzip
-sudo apt install -y ripgrep
+sudo pacman -Sy wl-clipboard
 
-# Install neovim
-sudo apt install software-properties-common -y
-sudo add-apt-repository ppa:neovim-ppa/unstable -y
-sudo apt-get update
-sudo apt install neovim -y
+sudo pacman -Sy tmux 
+sudo pacman -Sy neovim
 
-# Install zsh 
-sudo apt install zsh -y
+sudo pacman -Sy zsh
+chsh -s $(which zsh)
 
-# Install oh-my-zsh
 sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)" -v
 
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions -v ;
@@ -25,15 +19,6 @@ git clone https://github.com/zdharma-continuum/fast-syntax-highlighting.git ${ZS
 git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-completions -v
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install -v
 
-chsh -s $(which zsh)
-
-# Install NVM
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
-
-# Set latest node and npm versions
-nvm install node --reinstall-packages-from=node
-nvm alias default node
-nvm use default
-
-# Install Rust
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+# Neovim telescope requirements
+sudo pacman -Sy ripgrep
+sudo pacman -Sy fd

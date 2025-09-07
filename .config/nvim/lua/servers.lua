@@ -14,3 +14,5 @@ dap.configurations.cpp = {
         runInTerminal = true
     }
 }
+
+require"lspconfig".glsl_analyzer.setup{}

@@ -9,6 +9,7 @@ local servers = {
             -- diagnostics = { disable = { 'missing-fields' } },
         },
     },
+    glsl_analyzer = {},
 }
 
 return {

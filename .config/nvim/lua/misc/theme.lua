@@ -1,8 +1,9 @@
 local function setup()
     -- vim.cmd ":colorscheme catppuccin-macchiato"
-    vim.cmd ":colorscheme dark_flat"
+    -- vim.cmd ":colorscheme dark_flat"
     -- vim.cmd ":colorscheme carbonfox"
     -- vim.cmd ":colorscheme one_monokai"
+    vim.cmd "colorscheme rose-pine-moon"
 end
 
 return {
@@ -27,6 +28,12 @@ return {
     {
         "cpea2506/one_monokai.nvim",
         priority = 1000,
+        lazy = false,
+        config = setup
+    },
+    {
+        "rose-pine/neovim",
+        name = "rose-pine",
         lazy = false,
         config = setup
     }
