@@ -20,8 +20,6 @@ return {
 
             lspkind.init {}
 
-            -- require "lua/lsp/snippets"
-
             cmp.setup {
                 sources = {
                     { name = 'nvim_lsp' },

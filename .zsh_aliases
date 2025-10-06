@@ -34,3 +34,9 @@ alias cb="cargo build"
 alias cr="cargo run"
 alias ct="cargo test"
 
+# Conda
+alias startconda='eval "$($HOME/miniconda3/bin/conda shell.zsh hook)"'
+
+if [[ -f ~/.zsh_local ]]; then
+    source ~/.zsh_local
+fi

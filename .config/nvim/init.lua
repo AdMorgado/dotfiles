@@ -114,14 +114,17 @@ require('lazy').setup({
   require "lsp.lspconfig",
   require "lsp.treesitter",
   require "lsp.cmp",
+  require "lsp.conform",
 
   -- require "misc.autopairs",
+
   require "misc.comment",
   require "misc.dap",
   require "misc.indent",
   require "misc.lualine",
   require "misc.mini",
   require "misc.misc",
+  require "misc.molten",
   require "misc.neotree",
   require "misc.oil",
   require "misc.tabline",

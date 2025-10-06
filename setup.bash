@@ -15,3 +15,4 @@ cp -rf $base_path/.global_gitignore ~/
 
 cp -rf $base_path/.config/ ~/
 
+touch ~/.zsh_local

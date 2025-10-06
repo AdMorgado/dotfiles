@@ -12,12 +12,8 @@ return {
         opts = {
             automatic_installation = true,
             ensure_installed = {
-                -- "codelldb"
-                -- "cpptools"
             },
             handlers = {
-                -- codelldb = { }
-                -- cpptools = { }
             }
         }
     },

@@ -28,7 +28,7 @@ o.timeoutlen = 300;
 o.swapfile = false;
 
 -- Keep signcolumn on by default
-vim.wo.signcolumn = 'yes'
+o.signcolumn = 'yes'
 
 -- Decrease update time
 o.updatetime = 150
@@ -52,7 +52,7 @@ api.nvim_create_autocmd({ "BufEnter", "BufNewFile", "BufRead" }, {
 local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })
 vim.api.nvim_create_autocmd('TextYankPost', {
   callback = function()
-    vim.highlight.on_yank()
+    vim.hl.on_yank()
   end,
   group = highlight_group,
   pattern = '*',

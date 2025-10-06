@@ -51,8 +51,21 @@ k.set("n", "gb",
 )
 
 -- Diagnostic keymaps
-k.set('n', '<leader>lp', vim.diagnostic.goto_prev, { desc = 'Go to previous diagnostic message' })
-k.set('n', '<leader>ln', vim.diagnostic.goto_next, { desc = 'Go to next diagnostic message' })
+k.set('n', '<leader>lp', function()
+    vim.diagnostic.jump({
+        count = -1,
+        severity = { vim.diagnostic.severity.ERROR, vim.diagnostic.severity.WARN },
+        float = { source = "always" },
+    })
+end, { desc = 'Go to previous error or warning diagnostic' })
+
+k.set('n', '<leader>ln', function()
+    vim.diagnostic.jump({
+        count = 1,
+        severity = { vim.diagnostic.severity.ERROR, vim.diagnostic.severity.WARN },
+        float = { source = "always" },
+    })
+end, { desc = 'Go to next error or warning diagnostic' })
 
 k.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Open floating diagnostic message' })
 k.set('n', '<leader>le', vim.diagnostic.open_float, { desc = 'Open floating diagnostic message' })
@@ -71,9 +84,17 @@ end
 
 k.set("n", "<leader>lt", toggle_inline_diagnostics, { desc = "Toggle Diagnostic Hints" })
 
-k.set("n", "<leader>f", vim.lsp.buf.format, {
+-- k.set("n", "<leader>f", vim.lsp.buf.format, {
+--     desc = "[F]ormat buffer"
+-- })
+
+
+k.set("n", "<leader>f", function ()
+    require("conform").format()
+end, {
     desc = "[F]ormat buffer"
 })
+
 
 -- Debug Keymaps
 k.set("n", "<leader>dt", require("dapui").toggle,
