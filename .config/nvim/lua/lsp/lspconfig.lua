@@ -9,7 +9,27 @@ local servers = {
             -- diagnostics = { disable = { 'missing-fields' } },
         },
     },
-    glsl_analyzer = {},
+
+    -- why is RAM so expensive ):
+    rust_analyzer = {
+        settings = {
+        lru = {
+            capacity = 128,
+        },
+        cargo = {
+            allTargets = false,
+        },
+        check = {
+            allTargets = false,
+        },
+        cachePriming = {
+            enable = false,
+        },
+        procMacro = {
+            enable = true,
+        },
+        }
+    }
 }
 
 return {

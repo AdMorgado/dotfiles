@@ -1,12 +1,7 @@
 [core]
 	editor = nvim
 	excludesfile = ~/.global_gitignore
-[user]
-	email = ad3morgado@gmail.com
-	name = AdMorgado
 [advice]
 	ignoredHook = false
 [commit]
-	template = /home/ad3m/.gitmessage
-[credential]
-	helper = store
+	template = ~/.gitmessage
